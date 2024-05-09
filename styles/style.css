@@ -138,7 +138,9 @@ ol {
 
 .search-form__pseudo-checkbox {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
@@ -147,13 +149,9 @@ ol {
 .search-form__checkbox[type="checkbox"]:checked
   + .search-form__pseudo-checkbox::before {
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 15px;
   height: 15px;
   background: #fff;
-  transform: translate(-50%, -50%);
 }
 
 .button {
