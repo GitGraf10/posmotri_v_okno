@@ -55,7 +55,6 @@ ol {
   align-items: flex-end;
   gap: 30px;
   padding: 133px 30px;
-  min-height: 795px;
 }
 
 .result {
@@ -95,6 +94,7 @@ ol {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   gap: 5px;
   width: fit-content;
   cursor: pointer;
@@ -118,7 +118,7 @@ ol {
   border-bottom: 1px solid #fff;
   padding: 2px 0 1px 0;
   color: inherit;
-  font-family: "Fira Sans Condensed";
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
@@ -159,10 +159,10 @@ ol {
 
 .button {
   box-sizing: border-box;
-  border: 1px solid #ffffff;
+  border: 1px solid currentColor;
   padding: 0;
   color: #ffffff;
-  font-family: "Fira Sans Condensed";
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
@@ -188,28 +188,32 @@ ol {
 .search-form__submit-button {
   align-self: flex-end;
   min-width: 194px;
-  height: 34px;
+  min-height: 34px;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 20px;
+  gap: 18px;
   align-self: flex-start;
+  min-height: 528px;
 }
 
 .content__list {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 27px;
   max-height: 298px;
   overflow: auto;
 }
 
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 26px;
+}
+
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -258,27 +262,28 @@ ol {
 
 .content__video-card-description-container {
   color: #fff;
+  max-width: 200px;
+  flex-grow: 1;
 }
 
 .content__video-card-title {
   padding-top: 2px;
   padding-bottom: 4px;
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
-}
-
-.content__video-card-description-container {
-  flex-grow: 1;
 }
 
 .content__video-card-thumbnail {
